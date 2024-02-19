@@ -1,50 +1,38 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-
-import { Link } from 'react-router-dom';
+import { Button, MenuItem, Menu } from '@mui/material';
 
 const Links = () => {
+    const menuItems = [
+        { label: 'Home', to: '/' },
+        { label: 'About Us', to: '/about' },
+        { label: 'Course', to: '/course' },
+        { label: 'Blog', to: '/blog' },
+    ];
+
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+
     return (
         <>
-            <ListItem disablePadding>
-                <ListItemButton sx={{ textAlign: 'center' }}>
-                    <ListItemText>
-                        <Link style={{ color: "#000" }} to='/'>
-                            Home
-                        </Link>
-                    </ListItemText>
-                </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-                <ListItemButton sx={{ textAlign: 'center' }}>
-                    <ListItemText>
-                        <Link style={{ color: "#000" }} to='/about'>
-                            AboutUs
-                        </Link>
-                    </ListItemText>
-                </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-                <ListItemButton sx={{ textAlign: 'center' }}>
-                    <ListItemText>
-                        <Link style={{ color: "#000" }} to='/course'>
-                            Course
-                        </Link>
-                    </ListItemText>
-                </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-                <ListItemButton sx={{ textAlign: 'center' }}>
-                    <ListItemText>
-                        <Link style={{ color: "#000" }} to='/blog'>
-                            Blog
-                        </Link>
-                    </ListItemText>
-                </ListItemButton>
-            </ListItem>
+            {menuItems.map((item, index) => (
+                <ListItem key={index} disablePadding>
+                    <ListItemButton sx={{ textAlign: 'center' }}>
+                        <ListItemText>
+                            <Link style={{ color: "#000" }} to={item.to}>
+                                {item.label}
+                            </Link>
+                        </ListItemText>
+                    </ListItemButton>
+                </ListItem>
+            ))}
         </>
     );
 };

@@ -8,9 +8,8 @@ import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -19,11 +18,19 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import Links from './Links';
 
-
-
 const drawerWidth = 280;
 
 const Header = (props) => {
+
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -49,7 +56,15 @@ const Header = (props) => {
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
             <AppBar component="nav">
-                <Toolbar sx={{ background: '#12161F' }}>
+                <Toolbar
+                    sx={{
+                        background: '#12161F',
+                        flexGrow: 1,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'end'
+                    }}
+                >
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -67,25 +82,47 @@ const Header = (props) => {
                         India & America School
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        <Button sx={{ color: '#fff' }}>
-                            <Link style={{ color: '#fff' }} to='/'>
-                                Home
-                            </Link>
+                        <Button component={Link} to='/' sx={{ color: '#fff' }}>
+                            Home
                         </Button>
-                        <Button sx={{ color: '#fff' }}>
-                            <Link style={{ color: '#fff' }} to='/about'>
-                                AboutUs
-                            </Link>
+                        <Button component={Link} to='/about' sx={{ color: '#fff' }}>
+                            About Us
                         </Button>
-                        <Button sx={{ color: '#fff' }}>
-                            <Link style={{ color: '#fff' }} to='/course'>
-                                Course
-                            </Link>
+                        <Button component={Link} to='/courses' sx={{ color: '#fff' }}>
+                            Courses
                         </Button>
-                        <Button sx={{ color: '#fff' }}>
-                            <Link style={{ color: '#fff' }} to='/blog'>
-                                Course
-                            </Link>
+                        {/* <Menu
+                            id="basic-menu"
+                            anchorEl={anchorEl}
+                            open={open}
+                            onClose={handleClose}
+                            MenuListProps={{
+                                'aria-labelledby': 'basic-button',
+                            }}
+                        >
+                            <MenuItem onClick={handleClose}>
+                                <Button component={Link} to='/' sx={{ color: '#000', mx: 2 }}>
+                                    Blog
+                                </Button>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <Button component={Link} to='/' sx={{ color: '#000', mx: 2 }}>
+                                    Blog
+                                </Button>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <Button component={Link} to='/' sx={{ color: '#000', mx: 2 }}>
+                                    Blog
+                                </Button>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <Button component={Link} to='/' sx={{ color: '#000', mx: 2 }}>
+                                    Blog
+                                </Button>
+                            </MenuItem>
+                        </Menu> */}
+                        <Button component={Link} to='/blog' sx={{ color: '#fff' }}>
+                            Blog
                         </Button>
                     </Box>
                 </Toolbar>
@@ -94,6 +131,7 @@ const Header = (props) => {
                 <Drawer
                     container={container}
                     variant="temporary"
+                    anchor="right"
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
                     ModalProps={{
