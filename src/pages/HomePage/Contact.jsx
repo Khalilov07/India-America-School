@@ -1,9 +1,14 @@
 import React from 'react';
+
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
+import { Button } from '@mui/material';
+
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import MailIcon from '@mui/icons-material/Mail';
 
 const Contact = () => {
     const handleSubmit = (event) => {
@@ -12,27 +17,32 @@ const Contact = () => {
     };
 
     return (
-        <Container>
+        <Container sx={{ width: "85%", padding: "50px 0" }}>
             <Grid container spacing={4}>
                 {/* Левая сторона - Информация о местоположениях */}
                 <Grid item xs={12} sm={6}>
-                    <Typography variant="h6" gutterBottom>
-                        Locations
+                    <Typography sx={{ mt: 2, display: "flex", alignItems: "center" }} variant="h6" gutterBottom>
+                        <LocationOnIcon sx={{ mr: 1, color: "#1567F4" }} /> Locations
                     </Typography>
                     <Typography>
-                        <strong>USA</strong><br />
-                        USA
+                        <strong>USA </strong><br />
+                        3942, N California Ave 2 E Chicago Illinois 60618
                     </Typography>
-                    <Typography>
+                    <Typography sx={{ mt: 2 }}>
                         <strong>India</strong><br />
                         05 Jeevan Basera Apparment, Annapurna Mandir, Indore, MP 452009
                     </Typography>
-                    <Typography sx={{ mt: 2 }}>
-                        <strong>Phone (10AM - 5PM)</strong><br />
-                        US  +1-872-806-5906
-                        IND +91-982-696-4641
+                    <Typography sx={{ mt: 2, display: "flex", alignItems: "center" }} variant="h6" gutterBottom>
+                        <LocalPhoneIcon sx={{ mr: 1, color: "#1567F4" }} /> Phone
                     </Typography>
                     <Typography sx={{ mt: 2 }}>
+                        <strong> US  +1-872-806-5906</strong><br />
+                        <strong> IND +91-982-696-4641</strong><br />
+                    </Typography>
+                    <Typography sx={{ mt: 2, display: "flex", alignItems: "center" }} variant="h6" gutterBottom>
+                        <MailIcon sx={{ mr: 1, color: "#1567F4" }} /> Emial
+                    </Typography>
+                    <Typography sx={{ mt: 1 }}>
                         <strong>E-mail</strong><br />
                         info@techryders.com
                     </Typography>
@@ -85,15 +95,19 @@ const Contact = () => {
                                 />
                             </Grid>
                             <Grid item xs={12}>
-                                <Button type="submit" variant="contained" sx={{ background: "#960E0E" }}>
+                                <Button
+                                    type="submit"
+                                    variant="contained"
+                                >
                                     Submit
                                 </Button>
+
                             </Grid>
                         </Grid>
                     </form>
                 </Grid>
             </Grid>
-        </Container>
+        </Container >
     );
 };
 

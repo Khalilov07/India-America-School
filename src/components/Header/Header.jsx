@@ -53,7 +53,7 @@ const Header = (props) => {
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex', position: "sticky", zIndex: 99 }}>
             <CssBaseline />
             <AppBar component="nav">
                 <Toolbar

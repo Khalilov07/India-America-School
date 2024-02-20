@@ -2,6 +2,8 @@ import './App.css';
 import Header from './components/Header/Header';
 import AppRoutes from './components/App/AppRoutes';
 import Footer from './components/Footer/Footer';
+import AnchorExample from './components/Anchor/Anchor';
+
 
 const App = () => {
   return (
@@ -9,6 +11,7 @@ const App = () => {
       <Header />
       <AppRoutes />
       <Footer />
+      
     </div>
   );
 }

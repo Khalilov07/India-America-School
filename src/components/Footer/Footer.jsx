@@ -41,18 +41,21 @@ const Footer = () => {
                             Contact Us
                         </Typography>
                         <Typography variant="body2" sx={{ mt: 2 }}>
-                            123 Main Street, Cityville, Country
+                            3942, N California Ave 2 E Chicago Illinois 60618
                         </Typography>
                         <Typography variant="body2" sx={{ mt: 1 }}>
-                            contact@example.com
+                            info@techryders.com
                         </Typography>
-                        <Typography variant="body2" sx={{ mt: 1 }}>
-                            +123 456 7890
+                        <Typography variant="body2" sx={{ mt: 2 }}>
+                            US  +1-872-806-5906
+                        </Typography>
+                        <Typography variant="body2" sx={{ mt: 2 }}>
+                            IND +91-982-696-4641
                         </Typography>
                     </Grid>
                 </Grid>
                 <Box sx={{ mt: 4 }}>
-                    <Typography variant="body2" color="text.secondary" align="center">
+                    <Typography variant="body2" color="text.secondary" align="center" sx={{ p: 2, color: "#FFF" }}>
                         © {new Date().getFullYear()} India & America School. All rights reserved.
                     </Typography>
                 </Box>
