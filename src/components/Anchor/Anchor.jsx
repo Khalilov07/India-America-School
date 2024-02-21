@@ -34,9 +34,9 @@ const ScrollToTop = () => {
                 bottom: 20,
                 right: 30,
                 zIndex: 1000,
+                background: "#1976D2",
+                color: "#FFF",
                 display: isVisible ? 'flex' : 'none',
-                color: "red",
-                background: "#FFF"
             }}
             onClick={scrollToTop}
         >

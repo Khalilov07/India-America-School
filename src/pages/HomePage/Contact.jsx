@@ -21,28 +21,28 @@ const Contact = () => {
             <Grid container spacing={4}>
                 {/* Левая сторона - Информация о местоположениях */}
                 <Grid item xs={12} sm={6}>
-                    <Typography sx={{ mt: 2, display: "flex", alignItems: "center" }} variant="h6" gutterBottom>
+                    <Typography sx={{ mt: 2, display: "flex", alignItems: "center" }} variant="h5" gutterBottom>
                         <LocationOnIcon sx={{ mr: 1, color: "#1567F4" }} /> Locations
                     </Typography>
-                    <Typography>
+                    <Typography sx={{ ml: 4 }}>
                         <strong>USA </strong><br />
                         3942, N California Ave 2 E Chicago Illinois 60618
                     </Typography>
-                    <Typography sx={{ mt: 2 }}>
+                    <Typography sx={{ ml: 4 }}>
                         <strong>India</strong><br />
                         05 Jeevan Basera Apparment, Annapurna Mandir, Indore, MP 452009
                     </Typography>
-                    <Typography sx={{ mt: 2, display: "flex", alignItems: "center" }} variant="h6" gutterBottom>
+                    <Typography sx={{ mt: 2, display: "flex", alignItems: "center" }} variant="h5" gutterBottom>
                         <LocalPhoneIcon sx={{ mr: 1, color: "#1567F4" }} /> Phone
                     </Typography>
-                    <Typography sx={{ mt: 2 }}>
+                    <Typography sx={{ ml: 4 }}>
                         <strong> US  +1-872-806-5906</strong><br />
                         <strong> IND +91-982-696-4641</strong><br />
                     </Typography>
-                    <Typography sx={{ mt: 2, display: "flex", alignItems: "center" }} variant="h6" gutterBottom>
+                    <Typography sx={{ mt: 2, display: "flex", alignItems: "center" }} variant="h5" gutterBottom>
                         <MailIcon sx={{ mr: 1, color: "#1567F4" }} /> Emial
                     </Typography>
-                    <Typography sx={{ mt: 1 }}>
+                    <Typography sx={{ ml: 4 }}>
                         <strong>E-mail</strong><br />
                         info@techryders.com
                     </Typography>

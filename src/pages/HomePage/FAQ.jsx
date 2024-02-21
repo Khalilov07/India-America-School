@@ -44,8 +44,7 @@ const FAQ = () => {
         {faqData.map((item, index) => (
           <Grid key={index} item xs={12} md={6}>
             <Accordion
-
-              style={{
+              sx={{
                 boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)',
                 borderRadius: '10px',
                 transition: 'box-shadow 0.3s ease',
@@ -53,26 +52,29 @@ const FAQ = () => {
                   boxShadow: '0 0 30px rgba(0, 0, 0, 0.2)',
                 },
                 background: "none",
-                color: "#FFF"
+                color: "#FFF",
               }}
             >
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls={`panel${index + 1}a-content`}
                 id={`panel${index + 1}a-header`}
-                style={{
+                sx={{
                   background: 'none',
                   borderRadius: '10px 10px 0 0',
                   padding: '10px',
                   transition: 'background 0.3s ease',
+                  '&:hover': {
+                    background: 'rgba(255, 255, 255, 0.1)',
+                  },
                 }}
               >
-                <Typography variant="h6" style={{ flex: '1', fontSize: '1rem' }}>
+                <Typography variant="h6" sx={{ flex: '1', fontSize: '1rem' }}>
                   {item.question}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails
-                style={{
+                sx={{
                   backgroundColor: 'none',
                   borderRadius: '0 0 10px 10px',
                   padding: '10px',
