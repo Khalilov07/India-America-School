@@ -37,6 +37,9 @@ const ScrollToTop = () => {
                 background: "#1976D2",
                 color: "#FFF",
                 display: isVisible ? 'flex' : 'none',
+                '&:hover': {
+                    background: "#1565c0", // изменяем цвет при наведении
+                },
             }}
             onClick={scrollToTop}
         >
