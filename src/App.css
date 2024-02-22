@@ -18,3 +18,14 @@ a {
   align-items: center;
   justify-content: center;
 }
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeInAnimation 1s forwards;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+  }
+}

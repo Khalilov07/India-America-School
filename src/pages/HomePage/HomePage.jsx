@@ -3,7 +3,7 @@ import Contact from './Sections/Contact';
 import FAQ from './Sections/FAQ';
 import Reviews from './Sections/Reviews';
 import ScrollToTop from '../../components/Anchor/Anchor';
-import { Container } from '@mui/material';
+import Offer from './Sections/Offer';
 import Events from './Sections/Events';
 import Statistics from './Sections/Statistics';
 import Course from './Sections/Course';
@@ -14,6 +14,7 @@ const HomePage = () => {
         <main className='main'>
             <Greeting />
             <Course />
+            <Offer />
             <Statistics />
             <Events />
             <Reviews />
