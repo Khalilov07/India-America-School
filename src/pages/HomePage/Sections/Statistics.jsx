@@ -1,6 +1,6 @@
 import React from 'react';
 import CountUp from 'react-countup';
-import { Box, Typography, Container, Grid, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Typography, Grid, useMediaQuery, useTheme } from '@mui/material';
 
 const Statistics = () => {
   const theme = useTheme();
