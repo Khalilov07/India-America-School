@@ -1,6 +1,6 @@
 import React from 'react';
 import CountUp from 'react-countup';
-import { Box, Typography, Grid, useMediaQuery, useTheme, Paper, Rating, IconButton } from '@mui/material';
+import { Box, Typography, Grid, useMediaQuery, useTheme, Paper, IconButton } from '@mui/material';
 
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
@@ -47,17 +47,16 @@ const Statistics = () => {
     ];
 
     return (
-        <Box className="section" padding="50px 0">
-            <Grid width={"85%"} container spacing={3} justifyContent="space-between" alignItems="center">
+        <Box className="statistics section" padding="50px 0">
+            <Grid className='statistics__wrapper' container spacing={3} justifyContent="space-between" alignItems="start">
                 {/* Statistics */}
                 {/* Image */}
-                <Grid item xs={12} sm={isScreenSmall ? 12 : 6}>
-
+                <Grid item xs={12} sm={isScreenSmall ? 12 : 6} justifyContent={isScreenSmall ? "center" : "flex-start"}>
                     <Box
                         style={{
                             display: 'flex',
                             flexWrap: 'wrap',
-                            justifyContent: 'space-between',
+
                         }}
                     >
                         {reviews.map((review) => (
@@ -93,7 +92,7 @@ const Statistics = () => {
                         ))}
                     </Box>
                 </Grid>
-                <Grid item xs={12} sm={isScreenMedium ? 12 : 6}>
+                <Grid item xs={12} sm={isScreenMedium ? 12 : 6} md={isScreenMedium ? 12 : undefined}>
                     {!isScreenSmall && (
                         <img
                             src="./images/for-about.webp"  // Replace with the actual image URL

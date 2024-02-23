@@ -1,11 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+import { Link } from 'react-router-dom';
+
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
+import { Button } from '@mui/material';
 
 const Footer = () => {
+
+    const [isVisible, setIsVisible] = useState(false)
+
+    const handleScroll = () => {
+        if (window.scrollY > 300) {
+            setIsVisible(true);
+        } else {
+            setIsVisible(false);
+        }
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <Box component="footer" sx={{ mt: '50px', backgroundColor: '#12161F', color: '#fff' }}>
             <Container>
@@ -23,18 +51,18 @@ const Footer = () => {
                         <Typography variant="h6" component="div">
                             Quick Links
                         </Typography>
-                        <Link to="/" color="inherit" sx={{ display: 'block', mt: 1 }}>
+                        <Button component={Link} onClick={() => scrollToTop()} to="/" color="inherit" sx={{ display: 'block', mt: 1 }}>
                             Home
-                        </Link>
-                        <Link to="/about" color="inherit" sx={{ display: 'block', mt: 1 }}>
+                        </Button>
+                        <Button component={Link} onClick={() => scrollToTop()} to="/about" color="inherit" sx={{ display: 'block', mt: 1 }}>
                             About Us
-                        </Link>
-                        <Link to="/course" color="inherit" sx={{ display: 'block', mt: 1 }}>
+                        </Button>
+                        <Button component={Link} onClick={() => scrollToTop()} to="/course" color="inherit" sx={{ display: 'block', mt: 1 }}>
                             Courses
-                        </Link>
-                        <Link to="/blog" color="inherit" sx={{ display: 'block', mt: 1 }}>
+                        </Button>
+                        <Button component={Link} onClick={() => scrollToTop()} to="/blog" color="inherit" sx={{ display: 'block', mt: 1 }}>
                             Blog
-                        </Link>
+                        </Button>
                     </Grid>
                     <Grid item xs={12} sm={6} md={4}>
                         <Typography variant="h6" component="div">

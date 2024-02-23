@@ -88,7 +88,7 @@ const Header = (props) => {
                         <Button component={Link} to='/about' sx={{ color: '#fff' }}>
                             About Us
                         </Button>
-                        <Button component={Link} to='/courses' sx={{ color: '#fff' }}>
+                        <Button component={Link} to='/course' sx={{ color: '#fff' }}>
                             Courses
                         </Button>
                         {/* <Menu

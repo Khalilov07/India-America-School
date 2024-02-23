@@ -1,10 +1,11 @@
+import { Box } from '@mui/material';
 import React from 'react';
 
 const BlogPage= () => {
     return (
-        <div>
-            blog
-        </div>
+        <Box className="section">
+            blogs
+        </Box>
     );
 };
 

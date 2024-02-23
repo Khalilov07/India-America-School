@@ -6,6 +6,7 @@ import CoursePage from '../../pages/CoursePage/CoursePage';
 import BlogPage from '../../pages/BlogPage/BlogPage';
 import SingleBlogPage from '../../pages/SingleBlogPage/SingleBlogPage';
 import AboutPage from '../../pages/AboutPage/AboutPage';
+import SingleCoursePage from '../../pages/SingleCoursePage/SingleCoursePage';
 
 const AppRoutes = () => {
     return (
@@ -14,7 +15,8 @@ const AppRoutes = () => {
             <Route path='/about' element={<AboutPage />} />
             <Route path='/course' element={<CoursePage />} />
             <Route path='/blog' element={<BlogPage />} />
-            <Route path='/singleBlog' element={<SingleBlogPage />} />
+            <Route path='/blog/:id' element={<SingleBlogPage />} />
+            <Route path='/course/:id' element={<SingleCoursePage />} />
         </Routes>
     );
 };
