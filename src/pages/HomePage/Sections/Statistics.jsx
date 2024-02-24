@@ -34,7 +34,7 @@ const Statistics = () => {
             <Grid container spacing={3} justifyContent="flex-start">
               {statsData.map((stat, index) => (
                 <Grid key={index} item xs={12} sm={6} md={4}>
-                  <Box textAlign="center">
+                  <Box>
                     <Typography variant="h3">
                       <CountUp start={0} end={stat.value} duration={3} separator="," />
                       {stat.symbol}

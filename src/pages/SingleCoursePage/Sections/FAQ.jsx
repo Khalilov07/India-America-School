@@ -78,13 +78,14 @@ const FAQ = () => {
                                         },
                                     }}
                                 >
-                                    <Typography variant="h6" sx={{ flex: '1', fontSize: '1rem' }}>
+                                    <Typography variant="h6" ml={2} sx={{ flex: '1', fontSize: '1rem' }}>
                                         {item.question}
                                     </Typography>
                                 </AccordionSummary>
                                 <AccordionDetails
                                     sx={{
-                                        backgroundColor: '#FFF',
+                                        // backgroundColor: '#FFF',
+                                        color:"#FFF",
                                         borderRadius: '2px',
                                         padding: '10px',
                                         margin: 2

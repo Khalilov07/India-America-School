@@ -48,7 +48,7 @@ const Statistics = () => {
 
     return (
         <Box className="section" padding="50px 0">
-            <Grid className='statistics__wrapper' container spacing={3} justifyContent="space-between" alignItems="start" width={"85%"} margin={"0 auto"}>
+            <Grid container spacing={2} justifyContent="center" alignItems="start" width={"85%"} margin={"0 auto"}>
                 {/* Statistics */}
                 {/* Image */}
                 <Grid item xs={12} sm={isScreenSmall ? 12 : 6} justifyContent={isScreenSmall ? "center" : "flex-start"}>
@@ -103,7 +103,7 @@ const Statistics = () => {
                     <Paper elevation={3} sx={{ padding: 3, textAlign: 'center' }}>
                         <Grid container spacing={3} justifyContent="center">
                             {statsData.map((stat, index) => (
-                                <Grid key={index} item xs={12} sm={6} md={4}>
+                                <Grid key={index} item xs={12} sm={4} md={4}>
                                     <Box>
                                         <Typography variant="subtitle1" sx={{ color: 'text.secondary' }}>
                                             {stat.label}
