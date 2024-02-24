@@ -47,11 +47,12 @@ const FAQ = () => {
                     Frequently asked questions about Course
                 </Typography>
 
-                <Grid justifyContent={"center"} container spacing={2} sx={{ margin: "auto" }}>
+                <Grid justifyContent={"center"} container spacing={0} sx={{ margin: "auto" }}>
                     {faqData.map((item, index) => (
-                        <Grid key={index} item xs={12} md={10}>
+                        <Grid justifyContent={"center"} key={index} item xs={12} md={10}>
                             <Accordion
                                 sx={{
+                                    marginBottom: 2,
                                     boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)',
                                     // borderRadius: '10px',
                                     transition: 'box-shadow 0.3s ease',
@@ -85,13 +86,13 @@ const FAQ = () => {
                                 <AccordionDetails
                                     sx={{
                                         // backgroundColor: '#FFF',
-                                        color:"#FFF",
+                                        color: "#FFF",
                                         borderRadius: '2px',
                                         padding: '10px',
                                         margin: 2
                                     }}
                                 >
-                                    <Typography sx={{ fontWeight: "700" ,fontSize: "0.9rem" }}>{item.answer}</Typography>
+                                    <Typography sx={{ fontWeight: "700", fontSize: "0.9rem" }}>{item.answer}</Typography>
                                 </AccordionDetails>
                             </Accordion>
                         </Grid>

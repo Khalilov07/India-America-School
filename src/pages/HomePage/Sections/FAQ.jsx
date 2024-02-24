@@ -54,11 +54,12 @@ const FAQ = () => {
           }}>
           Frequently asked questions
         </Typography>
-        <Grid container spacing={3} sx={{ margin: "auto" }}>
+        <Grid container spacing={0} sx={{ margin: "auto", }}>
           {faqData.map((item, index) => (
             <Grid key={index} item xs={12} md={6}>
               <Accordion
                 sx={{
+                  margin: 1,
                   boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)',
                   borderRadius: '10px',
                   transition: 'box-shadow 0.3s ease',
