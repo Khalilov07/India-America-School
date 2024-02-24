@@ -47,8 +47,8 @@ const Statistics = () => {
     ];
 
     return (
-        <Box className="statistics section" padding="50px 0">
-            <Grid className='statistics__wrapper' container spacing={3} justifyContent="space-between" alignItems="start">
+        <Box className="section" padding="50px 0">
+            <Grid className='statistics__wrapper' container spacing={3} justifyContent="space-between" alignItems="start" width={"85%"} margin={"0 auto"}>
                 {/* Statistics */}
                 {/* Image */}
                 <Grid item xs={12} sm={isScreenSmall ? 12 : 6} justifyContent={isScreenSmall ? "center" : "flex-start"}>

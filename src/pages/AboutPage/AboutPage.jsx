@@ -6,8 +6,8 @@ import Reviews from '../../components/Reviews/Reviews';
 const AboutPage = () => {
   return (
     <>
-      <OurStory />
       <Statistics />
+      <OurStory />
       <Reviews />
     </>
   );

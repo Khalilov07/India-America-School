@@ -99,7 +99,7 @@ const Offer = () => {
                 >
                     <Button
                         component={Link}
-                        to="/courses"
+                        to="/course"
                         variant="contained"
                         sx={{
                             background: "#1976D2",
