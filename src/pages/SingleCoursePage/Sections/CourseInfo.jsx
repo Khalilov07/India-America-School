@@ -38,9 +38,9 @@ const CourseInfo = ({ courseTitle, courseDescription, courseImage }) => {
                 <img
                     // component="img"
                     alt="Course Image"
-                    height="140"
-                    width={"100%"}
-                    url='./images/events.jpg'
+                    height="340"
+                    width="100%"
+                    src='/images/for-about.webp'
                 />
 
             </Grid>

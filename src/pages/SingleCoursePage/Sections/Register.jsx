@@ -6,7 +6,7 @@ import { Box, Container, Typography, Grid, Paper, TextField, Button } from '@mui
 const Register = () => {
     return (
         <div>
-            <Box className="section" style={{ backgroundColor: '#f8f8f8', padding: '60px 0' }}>
+            <Box className="section" style={{ backgroundColor: '#f8f8f8', padding: '20px 0 60px' }}>
                 <Container style={{ width: '90%' }}>
                     <Grid alignItems={"center"} container spacing={3}>
                         {/* Left side - Text */}

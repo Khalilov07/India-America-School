@@ -9,7 +9,7 @@ const Links = () => {
     const menuItems = [
         { label: 'Home', to: '/' },
         { label: 'About Us', to: '/about' },
-        { label: 'Course', to: '/course' },
+        { label: 'Courses', to: '/course' },
         { label: 'Blog', to: '/blog' },
     ];
 

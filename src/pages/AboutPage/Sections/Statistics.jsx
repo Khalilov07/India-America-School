@@ -48,9 +48,8 @@ const Statistics = () => {
 
     return (
         <Box className="section" padding="50px 0">
-            <Grid container spacing={2} justifyContent="center" alignItems="start" width={"85%"} margin={"0 auto"}>
-                {/* Statistics */}
-                {/* Image */}
+            <Grid container spacing={1} justifyContent="center" alignItems="start" width={"85%"} margin={"0 auto"}>
+
                 <Grid item xs={12} sm={isScreenSmall ? 12 : 6} justifyContent={isScreenSmall ? "center" : "flex-start"}>
                     <Box
                         style={{

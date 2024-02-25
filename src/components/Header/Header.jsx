@@ -20,6 +20,13 @@ import Links from './Links';
 
 const drawerWidth = 280;
 
+const links = [
+    { label: 'Home', to: '/' },
+    { label: 'About Us', to: '/about' },
+    { label: 'Courses', to: '/course' },
+    { label: 'Blog', to: '/blog' },
+];
+
 const Header = (props) => {
 
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -82,15 +89,12 @@ const Header = (props) => {
                         India & America School
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        <Button component={Link} to='/' sx={{ color: '#fff' }}>
-                            Home
-                        </Button>
-                        <Button component={Link} to='/about' sx={{ color: '#fff' }}>
-                            About Us
-                        </Button>
-                        <Button component={Link} to='/course' sx={{ color: '#fff' }}>
-                            Courses
-                        </Button>
+                        {links.map(link => (
+                            <Button component={Link} to={`${link.to}`} sx={{ color: '#fff', fontWeight: "bold", letterSpacing: "1px" }}>
+                                {link.label}
+                            </Button>
+                        ))}
+                       
                         {/* <Menu
                             id="basic-menu"
                             anchorEl={anchorEl}
@@ -121,9 +125,7 @@ const Header = (props) => {
                                 </Button>
                             </MenuItem>
                         </Menu> */}
-                        <Button component={Link} to='/blog' sx={{ color: '#fff' }}>
-                            Blog
-                        </Button>
+                       
                     </Box>
                 </Toolbar>
             </AppBar>

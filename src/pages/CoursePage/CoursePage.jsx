@@ -55,6 +55,8 @@ const CoursesSection = () => {
                     textAlign={"center"}
                     maxWidth={"50%"}
                     fontSize={"1rem"}
+                    letterSpacing={1}
+                    mb={5}
                 >
                     Welcome to a range of exciting courses designed to empower and inspire you on your learning journey. Discover an exciting world of knowledge and skill development with our carefully designed courses:
                 </Typography>

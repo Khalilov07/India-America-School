@@ -35,7 +35,7 @@ const FAQ = () => {
                 padding: "50px 0"
             }}>
             <Container sx={{ width: '85%', }}>
-                <Typography variant="h3"
+                <Typography variant="h4"
                     style={{
                         flex: '1',
                         textAlign: "center",
@@ -49,7 +49,7 @@ const FAQ = () => {
 
                 <Grid justifyContent={"center"} container spacing={0} sx={{ margin: "auto" }}>
                     {faqData.map((item, index) => (
-                        <Grid justifyContent={"center"} key={index} item xs={12} md={10}>
+                        <Grid mb={1} justifyContent={"center"} key={index} item xs={12} md={10}>
                             <Accordion
                                 sx={{
                                     marginBottom: 2,
