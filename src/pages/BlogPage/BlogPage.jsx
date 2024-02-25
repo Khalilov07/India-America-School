@@ -86,7 +86,7 @@ const BlogPage = () => {
             {/* Фильтр и поиск */}
             <Box marginBottom={2} mt={20} textAlign="center">
                 <TextField
-                    label="Filter by title or category"
+                    label="Search"
                     variant="outlined"
                     value={filter}
                     onChange={(e) => setFilter(e.target.value)}

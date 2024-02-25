@@ -53,7 +53,7 @@ const CoursesSection = () => {
                     color={"#022139"}
                     margin={"0 auto"}
                     textAlign={"center"}
-                    maxWidth={"50%"}
+                    maxWidth={"80%"}
                     fontSize={"1rem"}
                     letterSpacing={1}
                     mb={5}
