@@ -6,7 +6,12 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { Button } from '@mui/material';
+import { Button, IconButton } from '@mui/material';
+
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+
 
 const Footer = () => {
 
@@ -80,11 +85,41 @@ const Footer = () => {
                         <Typography variant="body2" sx={{ mt: 2 }}>
                             IND +91-982-696-4641
                         </Typography>
+                        <IconButton
+                            href="https://www.facebook.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            color="inherit"
+                            aria-label="Facebook"
+                            sx={{ mr: 1, mt: 2 }}
+                        >
+                            <FacebookIcon />
+                        </IconButton>
+                        <IconButton
+                            href="https://twitter.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            color="inherit"
+                            aria-label="Twitter"
+                            sx={{ mr: 1, mt: 2 }}                        >
+                            <TwitterIcon />
+                        </IconButton>
+                        <IconButton
+                            href="https://www.instagram.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            color="inherit"
+                            aria-label="Instagram"
+                            sx={{ mr: 1, mt: 2 }}
+                        >
+                            <InstagramIcon />
+                        </IconButton>
                     </Grid>
                 </Grid>
+
                 <Box sx={{ mt: 4 }}>
                     <Typography variant="body2" color="text.secondary" align="center" sx={{ p: 2, color: "#FFF" }}>
-                        © {new Date().getFullYear()} India & America School. All rights reserved.
+                        © {new Date().getFullYear()} Сode Сrusher. All rights reserved.
                     </Typography>
                 </Box>
             </Container>

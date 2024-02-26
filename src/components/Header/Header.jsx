@@ -48,7 +48,7 @@ const Header = (props) => {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" sx={{ my: 2 }}>
-                India & America School
+                Сode Сrusher
             </Typography>
             <Divider />
             <List>
@@ -86,7 +86,7 @@ const Header = (props) => {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                        India & America School
+                        Сode Сrusher
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {links.map(link => (
@@ -94,7 +94,7 @@ const Header = (props) => {
                                 {link.label}
                             </Button>
                         ))}
-                       
+
                         {/* <Menu
                             id="basic-menu"
                             anchorEl={anchorEl}
@@ -125,7 +125,7 @@ const Header = (props) => {
                                 </Button>
                             </MenuItem>
                         </Menu> */}
-                       
+
                     </Box>
                 </Toolbar>
             </AppBar>
