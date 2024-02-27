@@ -52,29 +52,61 @@ const Register = () => {
                                     To register for the course
                                 </Typography>
                                 <form>
-                                    <TextField
-                                        label="Your Name"
-                                        fullWidth
-                                        margin="normal"
-                                        variant="outlined"
-                                    />
-                                    <TextField
-                                        label="Your Email"
-                                        fullWidth
-                                        margin="normal"
-                                        variant="outlined"
-                                    />
-                                    <TextField
-                                        label="Your Message"
-                                        multiline
-                                        rows={4}
-                                        fullWidth
-                                        margin="normal"
-                                        variant="outlined"
-                                    />
-                                    <Button type="submit" variant="contained" color="primary">
-                                        Submit
-                                    </Button>
+                                    <Grid container spacing={2}>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                required
+                                                fullWidth
+                                                id="firstName"
+                                                label="First Name"
+                                                name="firstName"
+                                                variant="outlined"
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                required
+                                                fullWidth
+                                                id="lastName"
+                                                label="Last Name"
+                                                name="lastName"
+                                                variant="outlined"
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <TextField
+                                                required
+                                                fullWidth
+                                                id="email"
+                                                label="Email"
+                                                name="email"
+                                                type="email"
+                                                variant="outlined"
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <TextField
+                                                required
+                                                fullWidth
+                                                id="message"
+                                                label="Message"
+                                                name="message"
+                                                multiline
+                                                rows={4}
+                                                variant="outlined"
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <Button
+                                                type="submit"
+                                                variant="contained"
+                                                fullWidth
+                                                sx={{ background: "#1567F4", color: "#FFF", '&:hover': { background: "#0E4CBF" } }}
+                                            >
+                                                Submit
+                                            </Button>
+                                        </Grid>
+                                    </Grid>
                                 </form>
                             </Paper>
                         </Grid>
