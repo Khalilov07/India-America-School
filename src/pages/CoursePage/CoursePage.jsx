@@ -45,6 +45,7 @@ const CoursesSection = () => {
                     color={"#022139"}
                     textAlign={"center"}
                     mb={1}
+                    letterSpacing={'2px'}
                 >
                     Our Courses
                 </Typography>

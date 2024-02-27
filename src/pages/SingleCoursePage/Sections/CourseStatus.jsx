@@ -8,8 +8,13 @@ import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 
 const CourseStatus = ({ students, assignments, hours, mentors }) => {
   return (
-    <Grid container spacing={2} width={"85%"} justifyContent="center" margin={"0 auto"}>
-      <Grid item xs={12} sm={6} md={3}>
+    <Grid
+      container
+      width={"85%"}
+      justifyContent="center"
+      margin={"0 auto"}
+    >
+      <Grid maxWidth={'45%'} mb={2} item xs={12} sm={6} md={3}>
         <Typography variant="h6" align="center">
           <SchoolIcon color="primary" fontSize="large" />
           <br />
@@ -20,7 +25,7 @@ const CourseStatus = ({ students, assignments, hours, mentors }) => {
         </Typography>
       </Grid>
 
-      <Grid item xs={12} sm={6} md={3}>
+      <Grid maxWidth={'45%'} item xs={12} sm={6} md={3}>
         <Typography variant="h6" align="center">
           <AssignmentIcon color="primary" fontSize="large" />
           <br />
@@ -31,7 +36,7 @@ const CourseStatus = ({ students, assignments, hours, mentors }) => {
         </Typography>
       </Grid>
 
-      <Grid item xs={12} sm={6} md={3}>
+      <Grid maxWidth={'45%'} item xs={12} sm={6} md={3}>
         <Typography variant="h6" align="center">
           <ScheduleIcon color="primary" fontSize="large" />
           <br />
@@ -42,7 +47,7 @@ const CourseStatus = ({ students, assignments, hours, mentors }) => {
         </Typography>
       </Grid>
 
-      <Grid item xs={12} sm={6} md={3}>
+      <Grid maxWidth={'45%'} item xs={12} sm={6} md={3}>
         <Typography variant="h6" align="center">
           <SupervisorAccountIcon color="primary" fontSize="large" />
           <br />
@@ -52,7 +57,7 @@ const CourseStatus = ({ students, assignments, hours, mentors }) => {
           <CountUp start={0} end={1200} duration={2} separator="," />
         </Typography>
       </Grid>
-    </Grid>
+    </Grid >
   );
 };
 
